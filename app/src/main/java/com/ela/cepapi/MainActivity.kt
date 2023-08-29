@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         val retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("viacep.com.br/ws/")
+            .baseUrl("https://viacep.com.br/ws/")
             .build()
             .create(Api::class.java)
 
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    private fun setFormularios(logradouro: String, bairro: String, localidade: String, uf: String){
+    private fun setFormularios(logradouro: String, bairro: String, localidade: String, uf: String) {
         binding.editLogradouro.setText(logradouro)
         binding.editBairro.setText(bairro)
         binding.editCidade.setText(localidade)
